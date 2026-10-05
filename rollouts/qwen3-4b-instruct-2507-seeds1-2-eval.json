@@ -1,0 +1,25 @@
+{
+  "model": "huggingface/nscale/Qwen/Qwen3-4B-Instruct-2507",
+  "seeds": [
+    1,
+    2
+  ],
+  "games": 2,
+  "town_wins": 1,
+  "mafia_wins": 1,
+  "draws": 0,
+  "town_win_rate": 0.5,
+  "mafia_win_rate": 0.5,
+  "action_attempts": 58,
+  "accepted_actions": 57,
+  "warnings": 1,
+  "forfeits": 0,
+  "action_types": {
+    "kill": 3,
+    "investigate": 2,
+    "speak": 40,
+    "vote": 13
+  },
+  "prompt_tokens": 85069,
+  "completion_tokens": 3268
+}
