@@ -1,0 +1,104 @@
+{
+  "config": {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "ruleset": "v0.4",
+    "team": "town",
+    "action_family": "centered_candidate_vote_target",
+    "algorithm": "episodic_reinforce_with_ema_baseline",
+    "updates": 3,
+    "games_per_update": 4,
+    "eval_seeds": [
+      60000,
+      60007
+    ],
+    "train_seeds": [
+      3000,
+      3011
+    ],
+    "learning_rate": 0.0001,
+    "entropy_coef": 0.01,
+    "max_prompt_tokens": 1536,
+    "baseline_town_win_rate": 0.625,
+    "torch_version": "2.7.1+cu126"
+  },
+  "run_name": "town-centered-vote-20261004-110540",
+  "initial_eval": {
+    "games": 8,
+    "town_win_outcomes": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "town_win_rate": 0.5,
+    "town_mean_reward": 0.0,
+    "vote_valid_rate": 1.0,
+    "warnings": 0,
+    "forfeits": 0
+  },
+  "history": [
+    {
+      "update": 1,
+      "games_seen": 4,
+      "train/mean_reward": 0.0,
+      "train/town_win_rate": 0.5,
+      "train/policy_loss": 0.20261539076454937,
+      "train/mean_vote_entropy": 0.8516128934919834,
+      "train/votes": 20,
+      "train/gradient_norm": 11.773177146911621,
+      "train/weight_change_max": 9.999988105846569e-05,
+      "train/learning_rate": 0.0001,
+      "elapsed_minutes": 0.9683169514500001
+    },
+    {
+      "update": 2,
+      "games_seen": 8,
+      "train/mean_reward": 0.0,
+      "train/town_win_rate": 0.5,
+      "train/policy_loss": 0.0844088695012033,
+      "train/mean_vote_entropy": 0.8500799874846752,
+      "train/votes": 26,
+      "train/gradient_norm": 8.974479675292969,
+      "train/weight_change_max": 0.00020013378525618464,
+      "train/learning_rate": 0.0001,
+      "elapsed_minutes": 1.6247197581333335,
+      "eval/town_win_rate": 0.5,
+      "eval/random_baseline_win_rate": 0.625,
+      "eval/mean_reward": 0.0,
+      "eval/vote_valid_rate": 1.0,
+      "eval/warnings": 0,
+      "eval/forfeits": 0,
+      "eval/paired_difference": -0.125,
+      "eval/paired_ci_low": -0.37,
+      "eval/paired_ci_high": 0.11999999999999997
+    },
+    {
+      "update": 3,
+      "games_seen": 12,
+      "train/mean_reward": 0.0,
+      "train/town_win_rate": 0.5,
+      "train/policy_loss": 0.14298901776783168,
+      "train/mean_vote_entropy": 0.776406027090091,
+      "train/votes": 26,
+      "train/gradient_norm": 15.329488754272461,
+      "train/weight_change_max": 0.0003004884929396212,
+      "train/learning_rate": 0.0001,
+      "elapsed_minutes": 2.5118806749333333,
+      "eval/town_win_rate": 0.375,
+      "eval/random_baseline_win_rate": 0.625,
+      "eval/mean_reward": -0.25,
+      "eval/vote_valid_rate": 1.0,
+      "eval/warnings": 0,
+      "eval/forfeits": 0,
+      "eval/paired_difference": -0.25,
+      "eval/paired_ci_low": -0.5707802986469088,
+      "eval/paired_ci_high": 0.07078029864690877
+    }
+  ],
+  "adapter_path": "/data/mafia_vote/runs/town-centered-vote-20261004-110540/adapter",
+  "dashboard": "https://lalith1403--mafia-trackio-dashboard-dashboard.modal.run"
+}

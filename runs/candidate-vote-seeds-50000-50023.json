@@ -1,0 +1,2435 @@
+{
+  "policy": "candidate_yes_no",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "seeds": [
+    50000,
+    50023
+  ],
+  "town_wins": 10,
+  "per_seed_winner": {
+    "50000": "mafia",
+    "50001": "town",
+    "50002": "town",
+    "50003": "mafia",
+    "50004": "town",
+    "50005": "town",
+    "50006": "mafia",
+    "50007": "town",
+    "50008": "town",
+    "50009": "mafia",
+    "50010": "mafia",
+    "50011": "mafia",
+    "50012": "town",
+    "50013": "town",
+    "50014": "mafia",
+    "50015": "town",
+    "50016": "mafia",
+    "50017": "town",
+    "50018": "mafia",
+    "50019": "mafia",
+    "50020": "mafia",
+    "50021": "mafia",
+    "50022": "mafia",
+    "50023": "mafia"
+  },
+  "vote_summary": {
+    "votes": 144,
+    "mafia_target_rate": 0.2916666666666667,
+    "detective_votes_with_known_mafia": 6,
+    "known_mafia_vote_rate": 1.0,
+    "target_by_seat": {
+      "P0": {
+        "chosen": 10,
+        "available": 76
+      },
+      "P1": {
+        "chosen": 32,
+        "available": 80
+      },
+      "P2": {
+        "chosen": 20,
+        "available": 94
+      },
+      "P3": {
+        "chosen": 26,
+        "available": 77
+      },
+      "P4": {
+        "chosen": 23,
+        "available": 82
+      },
+      "P5": {
+        "chosen": 33,
+        "available": 71
+      }
+    }
+  },
+  "label_probe": {
+    "P0_swap_P3": {
+      "same_views": 38,
+      "changed_real_target": 14,
+      "original_chose_p0": 1,
+      "after_swap_chose_real_p0": 10
+    },
+    "P0_swap_P5": {
+      "same_views": 38,
+      "changed_real_target": 19,
+      "original_chose_p0": 3,
+      "after_swap_chose_real_p0": 15
+    }
+  },
+  "vote_trace": [
+    {
+      "seed": 50000,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50000,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50000,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50000,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50000,
+      "day": 2,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50000,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P0",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50001,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50001,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50001,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50001,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50001,
+      "day": 2,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50001,
+      "day": 2,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50002,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50002,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50002,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50002,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "detective",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50003,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50003,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "detective",
+      "target": "P4",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50003,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50003,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50003,
+      "day": 2,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50003,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2"
+      ]
+    },
+    {
+      "seed": 50004,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P3",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50004,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P3",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50004,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P3",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50004,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P3",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50004,
+      "day": 2,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P3",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50004,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P3",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50005,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50005,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50005,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50005,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50005,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P1",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50005,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P1",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P4",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50006,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50007,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50007,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "detective",
+      "target": "P3",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50007,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50007,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50007,
+      "day": 2,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50007,
+      "day": 2,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2"
+      ]
+    },
+    {
+      "seed": 50008,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": true,
+      "legal_targets": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50008,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50008,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50008,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P4",
+      "mafia_player": "P4",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P4",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 2,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P4",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50009,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50010,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50010,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50010,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50010,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50010,
+      "day": 2,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50010,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50011,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50011,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50011,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50011,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50011,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50011,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50012,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50012,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50012,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50012,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50012,
+      "day": 2,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50012,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": true,
+      "legal_targets": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50013,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50013,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50013,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50013,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50013,
+      "day": 2,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50013,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "detective",
+      "target": "P4",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 2,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 2,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P0",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50014,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P0",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "seed": 50015,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P4",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50015,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "detective",
+      "target": "P3",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50015,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P4",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50015,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50016,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50016,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50016,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50016,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50016,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50016,
+      "day": 2,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50017,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50017,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "detective",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50017,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50017,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50018,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50018,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50018,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50018,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50018,
+      "day": 2,
+      "round": "initial",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P5",
+      "mafia_player": "P5",
+      "hit_mafia": true,
+      "knows_mafia": true,
+      "legal_targets": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50018,
+      "day": 2,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P5",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50019,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50019,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "detective",
+      "target": "P4",
+      "mafia_player": "P4",
+      "hit_mafia": true,
+      "knows_mafia": true,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50019,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50019,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50019,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50019,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P4",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50020,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50020,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50020,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50020,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "detective",
+      "target": "P3",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50020,
+      "day": 2,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50020,
+      "day": 2,
+      "round": "initial",
+      "voter": "P4",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "seed": 50021,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50021,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50021,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50021,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50021,
+      "day": 2,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50021,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P2",
+      "mafia_player": "P0",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2"
+      ]
+    },
+    {
+      "seed": 50022,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50022,
+      "day": 1,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50022,
+      "day": 1,
+      "round": "initial",
+      "voter": "P4",
+      "role": "detective",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": true,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50022,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P1",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50022,
+      "day": 2,
+      "round": "initial",
+      "voter": "P1",
+      "role": "villager",
+      "target": "P4",
+      "mafia_player": "P2",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "seed": 50022,
+      "day": 2,
+      "round": "initial",
+      "voter": "P4",
+      "role": "detective",
+      "target": "P2",
+      "mafia_player": "P2",
+      "hit_mafia": true,
+      "knows_mafia": true,
+      "legal_targets": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 1,
+      "round": "initial",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P5",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 1,
+      "round": "initial",
+      "voter": "P2",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 1,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P5",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 1,
+      "round": "initial",
+      "voter": "P5",
+      "role": "villager",
+      "target": "P3",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 2,
+      "round": "initial",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P1",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 2,
+      "round": "initial",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P0",
+      "role": "detective",
+      "target": "P1",
+      "mafia_player": "P1",
+      "hit_mafia": true,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "seed": 50023,
+      "day": 2,
+      "round": "runoff",
+      "voter": "P3",
+      "role": "villager",
+      "target": "P0",
+      "mafia_player": "P1",
+      "hit_mafia": false,
+      "knows_mafia": false,
+      "legal_targets": [
+        "P0",
+        "P1"
+      ]
+    }
+  ]
+}
