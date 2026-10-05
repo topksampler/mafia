@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mafia · Game Replay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">MAFIA / LEARNING LAB</div>
+        <h1>Game replay</h1>
+        <p class="subtitle">Follow each decision, public claim, and private clue.</p>
+      </div>
+      <div class="top-summary" id="top-summary" aria-live="polite"></div>
+    </header>
+
+    <section class="transport" aria-label="Replay controls">
+      <label class="game-picker">Dataset
+        <select id="dataset-select" aria-label="Select dataset"></select>
+      </label>
+      <label class="game-picker">Seed
+        <span class="seed-picker">
+          <button id="previous-seed" type="button" aria-label="Previous seed">←</button>
+          <input id="seed-input" type="number" inputmode="numeric" aria-label="Game seed">
+          <button id="go-seed" type="button" aria-label="Go to seed">Go</button>
+          <button id="next-seed" type="button" aria-label="Next seed">→</button>
+        </span>
+      </label>
+      <label class="game-picker">Policy
+        <select id="policy-select" aria-label="Select policy"></select>
+      </label>
+      <div class="transport-buttons">
+        <button id="back-button" type="button" aria-label="Previous step">← Back</button>
+        <button id="step-button" type="button" class="primary">Step →</button>
+        <button id="play-button" type="button" aria-label="Play replay">▶ Play</button>
+      </div>
+      <div class="scrubber">
+        <span id="step-label" aria-live="polite">Step 0</span>
+        <input id="step-range" type="range" min="0" max="1" value="0" aria-label="Go to step">
+      </div>
+      <label class="truth-toggle"><input type="checkbox" id="reveal-roles"> Reveal all roles</label>
+    </section>
+
+    <div class="workspace">
+      <section class="scene night" id="scene" aria-label="Players around the table">
+        <div class="sky-orb" aria-hidden="true"></div>
+        <div class="stars" aria-hidden="true"></div>
+        <svg class="links" id="links" viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="table-map" aria-hidden="true">
+          <div class="table-inner">
+            <span id="table-period">NIGHT 1</span>
+            <strong id="table-phase">The city sleeps</strong>
+          </div>
+        </div>
+        <div id="seats"></div>
+        <div class="scene-legend">
+          <span><i class="legend-dot active"></i> Acting</span>
+          <span><i class="legend-dot target"></i> Targeted</span>
+          <span><i class="legend-dot gone"></i> Eliminated</span>
+        </div>
+      </section>
+
+      <aside class="inspector" aria-live="polite">
+        <div class="inspector-kicker" id="action-kicker">Before the first move</div>
+        <h2 id="action-title">The city sleeps</h2>
+        <div class="action-description" id="action-description">The Mafia and Detective will act privately tonight.</div>
+        <div class="speech-box" id="speech-box" hidden></div>
+        <div class="cues" id="cues"></div>
+        <div class="rule-note" id="rule-note" hidden><strong>Rule check:</strong> The Detective's yes/no night answer is private. A player may publicly claim an investigation; the game does not require the answer to be announced by the Godfather.</div>
+
+        <div class="divider"></div>
+        <h3>What this player knew</h3>
+        <div id="private-facts" class="small-copy">Select a step to see the acting player's private view.</div>
+
+        <div class="divider"></div>
+        <h3>Public record</h3>
+        <div id="public-events" class="event-list"></div>
+
+        <div class="divider"></div>
+        <h3>Room signals <span class="heading-note">mentions today, not votes</span></h3>
+        <div id="mentions" class="mention-bars"></div>
+
+        <div class="divider"></div>
+        <h3>Vote outcome <span class="heading-note">ballots appear when voting ends</span></h3>
+        <div id="vote-outcome" class="vote-outcome"></div>
+      </aside>
+    </div>
+
+    <section class="timeline-section" aria-label="Game timeline">
+      <div class="timeline-heading"><strong>Timeline</strong><span id="timeline-caption"></span></div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+    <p class="source-note">Frozen Qwen, scripted controls, and Reveal RL games are labeled separately. Scripted games use no LLM. Before/after Reveal RL games use Qwen for Detective reveal decisions only. Private facts and true roles are shown only in this local evaluator view.</p>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
