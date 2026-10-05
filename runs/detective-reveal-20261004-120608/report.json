@@ -1,0 +1,4754 @@
+{
+  "config": {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "ruleset": "v0.4",
+    "role": "detective",
+    "team": "town",
+    "action_family": "reveal_or_hold_on_every_eligible_speech",
+    "algorithm": "episodic_reinforce_with_ema_baseline",
+    "opponent_arms": [
+      "counterclaim",
+      "bluff"
+    ],
+    "updates": 2,
+    "eligible_games_per_update": 4,
+    "max_sampled_games_per_update": 60,
+    "eval_interval": 1,
+    "train_start_seed": 80000,
+    "eval_seeds": [
+      90000,
+      90031
+    ],
+    "learning_rate": 0.0001,
+    "entropy_coef": 0.01,
+    "max_prompt_tokens": 1536,
+    "fixed_hold_town_win_rate": 0.359375,
+    "fixed_reveal_town_win_rate": 0.484375,
+    "torch_version": "2.7.1+cu126"
+  },
+  "run_name": "detective-reveal-20261004-120608",
+  "dashboard": "https://lalith1403--mafia-trackio-dashboard-dashboard.modal.run",
+  "adapter_path": "/data/mafia_vote/runs/detective-reveal-20261004-120608/adapter",
+  "initial_eval": {
+    "games": 64,
+    "town_wins": 31,
+    "town_win_rate": 0.484375,
+    "by_arm": {
+      "counterclaim": {
+        "games": 32,
+        "town_wins": 19,
+        "town_win_rate": 0.59375,
+        "eligible_games": 8,
+        "eligible_choices": 23,
+        "reveals": 23
+      },
+      "bluff": {
+        "games": 32,
+        "town_wins": 12,
+        "town_win_rate": 0.375,
+        "eligible_games": 8,
+        "eligible_choices": 22,
+        "reveals": 22
+      }
+    },
+    "per_game": [
+      {
+        "seed": 90000,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90000,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90001,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9970190525054932,
+            "p_hold": 0.002980947494506836,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9990890026092529,
+            "p_hold": 0.0009109973907470703,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9997695088386536,
+            "p_hold": 0.00023049116134643555,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90001,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.999937891960144,
+            "p_hold": 6.210803985595703e-05,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9465966820716858,
+            "p_hold": 0.05340331792831421,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9933071732521057,
+            "p_hold": 0.006692826747894287,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90002,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90002,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90006,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9046505093574524,
+            "p_hold": 0.09534949064254761,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.8175744414329529,
+            "p_hold": 0.18242555856704712,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.8670357465744019,
+            "p_hold": 0.13296425342559814,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90006,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9465966820716858,
+            "p_hold": 0.05340331792831421,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9740425944328308,
+            "p_hold": 0.02595740556716919,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9399133324623108,
+            "p_hold": 0.06008666753768921,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.998498797416687,
+            "p_hold": 0.0015012025833129883,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9914224743843079,
+            "p_hold": 0.008577525615692139,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9990890026092529,
+            "p_hold": 0.0009109973907470703,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9999039173126221,
+            "p_hold": 9.608268737792969e-05,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.999841570854187,
+            "p_hold": 0.00015842914581298828,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90008,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90008,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90015,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 4,
+        "reveals": 4,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.999480664730072,
+            "p_hold": 0.0005193352699279785,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9947799444198608,
+            "p_hold": 0.00522005558013916,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9465966820716858,
+            "p_hold": 0.05340331792831421,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9933071732521057,
+            "p_hold": 0.006692826747894287,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 5
+          }
+        ]
+      },
+      {
+        "seed": 90015,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 4,
+        "reveals": 4,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.999480664730072,
+            "p_hold": 0.0005193352699279785,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9947799444198608,
+            "p_hold": 0.00522005558013916,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9465966820716858,
+            "p_hold": 0.05340331792831421,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9933071732521057,
+            "p_hold": 0.006692826747894287,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 5
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9989677667617798,
+            "p_hold": 0.0010322332382202148,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999203681945801,
+            "p_hold": 7.963180541992188e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999097585678101,
+            "p_hold": 9.02414321899414e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9989677667617798,
+            "p_hold": 0.0010322332382202148,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999203681945801,
+            "p_hold": 7.963180541992188e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999097585678101,
+            "p_hold": 9.02414321899414e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90017,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90017,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90019,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.999868631362915,
+            "p_hold": 0.00013136863708496094,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999687671661377,
+            "p_hold": 3.123283386230469e-05,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9998601675033569,
+            "p_hold": 0.0001398324966430664,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90019,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.999868631362915,
+            "p_hold": 0.00013136863708496094,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999687671661377,
+            "p_hold": 3.123283386230469e-05,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9998601675033569,
+            "p_hold": 0.0001398324966430664,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90020,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90020,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90030,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.999868631362915,
+            "p_hold": 0.00013136863708496094,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.970687747001648,
+            "p_hold": 0.02931225299835205,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90030,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9998840093612671,
+            "p_hold": 0.00011599063873291016,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9989012479782104,
+            "p_hold": 0.0010987520217895508,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9399133324623108,
+            "p_hold": 0.06008666753768921,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9933071732521057,
+            "p_hold": 0.006692826747894287,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.7981867790222168,
+            "p_hold": 0.2018132209777832,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9890130758285522,
+            "p_hold": 0.010986924171447754,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          }
+        ]
+      }
+    ]
+  },
+  "final_eval": {
+    "games": 64,
+    "town_wins": 31,
+    "town_win_rate": 0.484375,
+    "by_arm": {
+      "counterclaim": {
+        "games": 32,
+        "town_wins": 19,
+        "town_win_rate": 0.59375,
+        "eligible_games": 8,
+        "eligible_choices": 23,
+        "reveals": 23
+      },
+      "bluff": {
+        "games": 32,
+        "town_wins": 12,
+        "town_win_rate": 0.375,
+        "eligible_games": 8,
+        "eligible_choices": 22,
+        "reveals": 22
+      }
+    },
+    "per_game": [
+      {
+        "seed": 90000,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90000,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90001,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9995121955871582,
+            "p_hold": 0.0004878044128417969,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9998910427093506,
+            "p_hold": 0.00010895729064941406,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999203681945801,
+            "p_hold": 7.963180541992188e-05,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90001,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9999892711639404,
+            "p_hold": 1.0728836059570312e-05,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9940890073776245,
+            "p_hold": 0.005910992622375488,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9990890026092529,
+            "p_hold": 0.0009109973907470703,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90002,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90002,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90006,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9740425944328308,
+            "p_hold": 0.02595740556716919,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9525741338729858,
+            "p_hold": 0.04742586612701416,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9740425944328308,
+            "p_hold": 0.02595740556716919,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90006,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9840936064720154,
+            "p_hold": 0.01590639352798462,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9959298968315125,
+            "p_hold": 0.004070103168487549,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9859364032745361,
+            "p_hold": 0.014063596725463867,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.999841570854187,
+            "p_hold": 0.00015842914581298828,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9994471669197083,
+            "p_hold": 0.000552833080291748,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999417066574097,
+            "p_hold": 5.829334259033203e-05,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9999921321868896,
+            "p_hold": 7.867813110351562e-06,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999545812606812,
+            "p_hold": 4.5418739318847656e-05,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90008,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90008,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90015,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 4,
+        "reveals": 4,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9999203681945801,
+            "p_hold": 7.963180541992188e-05,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9996199607849121,
+            "p_hold": 0.0003800392150878906,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9940890073776245,
+            "p_hold": 0.005910992622375488,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9989677667617798,
+            "p_hold": 0.0010322332382202148,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 5
+          }
+        ]
+      },
+      {
+        "seed": 90015,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 4,
+        "reveals": 4,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9999203681945801,
+            "p_hold": 7.963180541992188e-05,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9996199607849121,
+            "p_hold": 0.0003800392150878906,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9940890073776245,
+            "p_hold": 0.005910992622375488,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9989677667617798,
+            "p_hold": 0.0010322332382202148,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 5
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9998766183853149,
+            "p_hold": 0.0001233816146850586,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999772310256958,
+            "p_hold": 2.276897430419922e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999724626541138,
+            "p_hold": 2.753734588623047e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9998766183853149,
+            "p_hold": 0.0001233816146850586,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999772310256958,
+            "p_hold": 2.276897430419922e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999724626541138,
+            "p_hold": 2.753734588623047e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90017,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90017,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90019,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9999756813049316,
+            "p_hold": 2.4318695068359375e-05,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999958276748657,
+            "p_hold": 4.172325134277344e-06,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999645948410034,
+            "p_hold": 3.540515899658203e-05,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90019,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9999756813049316,
+            "p_hold": 2.4318695068359375e-05,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999958276748657,
+            "p_hold": 4.172325134277344e-06,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9999645948410034,
+            "p_hold": 3.540515899658203e-05,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90020,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90020,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90030,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.999962329864502,
+            "p_hold": 3.7670135498046875e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9978172779083252,
+            "p_hold": 0.0021827220916748047,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90030,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 0.9999852180480957,
+            "p_hold": 1.4781951904296875e-05,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.999480664730072,
+            "p_hold": 0.0005193352699279785,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9902915358543396,
+            "p_hold": 0.0097084641456604,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.9996199607849121,
+            "p_hold": 0.0003800392150878906,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 0.9324532747268677,
+            "p_hold": 0.06754672527313232,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 0.998498797416687,
+            "p_hold": 0.0015012025833129883,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          }
+        ]
+      }
+    ]
+  },
+  "fixed_hold_eval": {
+    "games": 64,
+    "town_wins": 23,
+    "town_win_rate": 0.359375,
+    "by_arm": {
+      "counterclaim": {
+        "games": 32,
+        "town_wins": 17,
+        "town_win_rate": 0.53125,
+        "eligible_games": 8,
+        "eligible_choices": 19,
+        "reveals": 0
+      },
+      "bluff": {
+        "games": 32,
+        "town_wins": 6,
+        "town_win_rate": 0.1875,
+        "eligible_games": 8,
+        "eligible_choices": 22,
+        "reveals": 0
+      }
+    },
+    "per_game": [
+      {
+        "seed": 90000,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90000,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90001,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90001,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          }
+        ]
+      },
+      {
+        "seed": 90002,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90002,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90006,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90006,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 2,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 2,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          }
+        ]
+      },
+      {
+        "seed": 90008,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90008,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90015,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 1,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90015,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 4,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          }
+        ]
+      },
+      {
+        "seed": 90017,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90017,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90019,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90019,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 3,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          }
+        ]
+      },
+      {
+        "seed": 90020,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90020,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90030,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90030,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 2,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 2,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 2,
+        "reveals": 0,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "hold",
+            "p_reveal": 0.0,
+            "p_hold": 1.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          }
+        ]
+      }
+    ]
+  },
+  "fixed_reveal_eval": {
+    "games": 64,
+    "town_wins": 31,
+    "town_win_rate": 0.484375,
+    "by_arm": {
+      "counterclaim": {
+        "games": 32,
+        "town_wins": 19,
+        "town_win_rate": 0.59375,
+        "eligible_games": 8,
+        "eligible_choices": 23,
+        "reveals": 23
+      },
+      "bluff": {
+        "games": 32,
+        "town_wins": 12,
+        "town_win_rate": 0.375,
+        "eligible_games": 8,
+        "eligible_choices": 22,
+        "reveals": 22
+      }
+    },
+    "per_game": [
+      {
+        "seed": 90000,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90000,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90001,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90001,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90002,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90002,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90003,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90004,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90005,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90006,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90006,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P0",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90007,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P5",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90008,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90008,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90009,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90010,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90011,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90012,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90013,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90014,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90015,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 4,
+        "reveals": 4,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 5
+          }
+        ]
+      },
+      {
+        "seed": 90015,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 4,
+        "reveals": 4,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 2,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 4
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P3",
+            "alive_count": 3,
+            "prior_public_claims": 5
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90016,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90017,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90017,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90018,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90019,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90019,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 3,
+        "reveals": 3,
+        "choices": [
+          {
+            "day": 1,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 5,
+            "prior_public_claims": 3
+          }
+        ]
+      },
+      {
+        "seed": 90020,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90020,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90021,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90022,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90023,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90024,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90025,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90026,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90027,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90028,
+        "arm": "bluff",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "counterclaim",
+        "winner": "mafia",
+        "reward": -1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90029,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 0,
+        "reveals": 0,
+        "choices": []
+      },
+      {
+        "seed": 90030,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90030,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 1,
+            "round": 2,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 1,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P4",
+            "alive_count": 5,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "counterclaim",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 0
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 2
+          }
+        ]
+      },
+      {
+        "seed": 90031,
+        "arm": "bluff",
+        "winner": "town",
+        "reward": 1.0,
+        "eligible_choices": 2,
+        "reveals": 2,
+        "choices": [
+          {
+            "day": 2,
+            "round": 1,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 1
+          },
+          {
+            "day": 2,
+            "round": 3,
+            "choice": "reveal",
+            "p_reveal": 1.0,
+            "p_hold": 0.0,
+            "target": "P2",
+            "alive_count": 3,
+            "prior_public_claims": 3
+          }
+        ]
+      }
+    ]
+  },
+  "history": [
+    {
+      "update": 1,
+      "games_seen": 11,
+      "train/sample_count": 11,
+      "train/eligible_games": 4,
+      "train/eligible_choices": 11,
+      "train/reveal_choices": 10,
+      "train/eligible_town_win_rate": 0.75,
+      "train/all_sampled_town_win_rate": 0.36363636363636365,
+      "train/mean_reward": 0.5,
+      "train/policy_loss": -0.15620107037295838,
+      "train/mean_action_entropy": 0.0659330348941942,
+      "train/gradient_norm": 1.5231610536575317,
+      "train/weight_change_max": 9.999942994909361e-05,
+      "train/learning_rate": 0.0001,
+      "elapsed_minutes": 0.6917549948166667,
+      "eval/town_win_rate": 0.484375,
+      "eval/counterclaim_town_win_rate": 0.59375,
+      "eval/bluff_town_win_rate": 0.375,
+      "eval/eligible_games": 16,
+      "eval/reveals": 45,
+      "eval/fixed_hold_town_win_rate": 0.359375,
+      "eval/fixed_reveal_town_win_rate": 0.484375
+    },
+    {
+      "update": 2,
+      "games_seen": 29,
+      "train/sample_count": 18,
+      "train/eligible_games": 4,
+      "train/eligible_choices": 6,
+      "train/reveal_choices": 6,
+      "train/eligible_town_win_rate": 1.0,
+      "train/all_sampled_town_win_rate": 0.4444444444444444,
+      "train/mean_reward": 1.0,
+      "train/policy_loss": 0.06261054126809995,
+      "train/mean_action_entropy": 0.17305875176437743,
+      "train/gradient_norm": 1.9343432188034058,
+      "train/weight_change_max": 0.00020013241737615317,
+      "train/learning_rate": 0.0001,
+      "elapsed_minutes": 1.0644033509333333,
+      "eval/town_win_rate": 0.484375,
+      "eval/counterclaim_town_win_rate": 0.59375,
+      "eval/bluff_town_win_rate": 0.375,
+      "eval/eligible_games": 16,
+      "eval/reveals": 45,
+      "eval/fixed_hold_town_win_rate": 0.359375,
+      "eval/fixed_reveal_town_win_rate": 0.484375
+    }
+  ],
+  "sampled_games": [
+    {
+      "seed": 80000,
+      "arm": "counterclaim",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 2,
+      "reveals": 1,
+      "choices": [
+        {
+          "day": 2,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.9796676635742188,
+          "p_hold": 0.02033233642578125,
+          "target": "P3",
+          "alive_count": 3,
+          "prior_public_claims": 0
+        },
+        {
+          "day": 2,
+          "round": 2,
+          "choice": "hold",
+          "p_reveal": 0.7057850360870361,
+          "p_hold": 0.29421496391296387,
+          "target": "P3",
+          "alive_count": 3,
+          "prior_public_claims": 2
+        }
+      ]
+    },
+    {
+      "seed": 80001,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80002,
+      "arm": "counterclaim",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80003,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80004,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 3,
+      "reveals": 3,
+      "choices": [
+        {
+          "day": 1,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.9999339580535889,
+          "p_hold": 6.604194641113281e-05,
+          "target": "P1",
+          "alive_count": 5,
+          "prior_public_claims": 0
+        },
+        {
+          "day": 1,
+          "round": 2,
+          "choice": "reveal",
+          "p_reveal": 0.9988304972648621,
+          "p_hold": 0.0011695027351379395,
+          "target": "P1",
+          "alive_count": 5,
+          "prior_public_claims": 1
+        },
+        {
+          "day": 1,
+          "round": 3,
+          "choice": "reveal",
+          "p_reveal": 0.9996429681777954,
+          "p_hold": 0.00035703182220458984,
+          "target": "P1",
+          "alive_count": 5,
+          "prior_public_claims": 3
+        }
+      ]
+    },
+    {
+      "seed": 80005,
+      "arm": "bluff",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 3,
+      "reveals": 3,
+      "choices": [
+        {
+          "day": 1,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.9999822378158569,
+          "p_hold": 1.7762184143066406e-05,
+          "target": "P5",
+          "alive_count": 5,
+          "prior_public_claims": 1
+        },
+        {
+          "day": 1,
+          "round": 2,
+          "choice": "reveal",
+          "p_reveal": 0.9999203681945801,
+          "p_hold": 7.963180541992188e-05,
+          "target": "P5",
+          "alive_count": 5,
+          "prior_public_claims": 2
+        },
+        {
+          "day": 1,
+          "round": 3,
+          "choice": "reveal",
+          "p_reveal": 0.999595582485199,
+          "p_hold": 0.0004044175148010254,
+          "target": "P5",
+          "alive_count": 5,
+          "prior_public_claims": 3
+        }
+      ]
+    },
+    {
+      "seed": 80006,
+      "arm": "counterclaim",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80007,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80008,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80009,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80010,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 3,
+      "reveals": 3,
+      "choices": [
+        {
+          "day": 1,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.9999852180480957,
+          "p_hold": 1.4781951904296875e-05,
+          "target": "P0",
+          "alive_count": 5,
+          "prior_public_claims": 0
+        },
+        {
+          "day": 1,
+          "round": 2,
+          "choice": "reveal",
+          "p_reveal": 0.9999667406082153,
+          "p_hold": 3.325939178466797e-05,
+          "target": "P0",
+          "alive_count": 5,
+          "prior_public_claims": 2
+        },
+        {
+          "day": 1,
+          "round": 3,
+          "choice": "reveal",
+          "p_reveal": 0.9997965693473816,
+          "p_hold": 0.0002034306526184082,
+          "target": "P0",
+          "alive_count": 5,
+          "prior_public_claims": 3
+        }
+      ]
+    },
+    {
+      "seed": 80011,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80012,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80013,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80014,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 2,
+      "reveals": 2,
+      "choices": [
+        {
+          "day": 1,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.9997219443321228,
+          "p_hold": 0.00027805566787719727,
+          "target": "P4",
+          "alive_count": 5,
+          "prior_public_claims": 0
+        },
+        {
+          "day": 1,
+          "round": 2,
+          "choice": "reveal",
+          "p_reveal": 0.9999833106994629,
+          "p_hold": 1.6689300537109375e-05,
+          "target": "P4",
+          "alive_count": 5,
+          "prior_public_claims": 2
+        }
+      ]
+    },
+    {
+      "seed": 80015,
+      "arm": "bluff",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 2,
+      "reveals": 2,
+      "choices": [
+        {
+          "day": 2,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.9324532747268677,
+          "p_hold": 0.06754672527313232,
+          "target": "P0",
+          "alive_count": 3,
+          "prior_public_claims": 1
+        },
+        {
+          "day": 2,
+          "round": 2,
+          "choice": "reveal",
+          "p_reveal": 0.8933094143867493,
+          "p_hold": 0.10669058561325073,
+          "target": "P0",
+          "alive_count": 3,
+          "prior_public_claims": 3
+        }
+      ]
+    },
+    {
+      "seed": 80016,
+      "arm": "counterclaim",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80017,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80018,
+      "arm": "counterclaim",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80019,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80020,
+      "arm": "counterclaim",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80021,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80022,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80023,
+      "arm": "bluff",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 1,
+      "reveals": 1,
+      "choices": [
+        {
+          "day": 2,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.8354835510253906,
+          "p_hold": 0.16451644897460938,
+          "target": "P3",
+          "alive_count": 3,
+          "prior_public_claims": 1
+        }
+      ]
+    },
+    {
+      "seed": 80024,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80025,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80026,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80027,
+      "arm": "bluff",
+      "winner": "mafia",
+      "reward": -1.0,
+      "eligible_choices": 0,
+      "reveals": 0,
+      "choices": []
+    },
+    {
+      "seed": 80028,
+      "arm": "counterclaim",
+      "winner": "town",
+      "reward": 1.0,
+      "eligible_choices": 1,
+      "reveals": 1,
+      "choices": [
+        {
+          "day": 2,
+          "round": 1,
+          "choice": "reveal",
+          "p_reveal": 0.9998205304145813,
+          "p_hold": 0.00017946958541870117,
+          "target": "P4",
+          "alive_count": 3,
+          "prior_public_claims": 0
+        }
+      ]
+    }
+  ],
+  "total_sampled_games": 29,
+  "total_eligible_training_games": 8,
+  "eval_traces_path": "/data/mafia_vote/runs/detective-reveal-20261004-120608/eval_games.jsonl"
+}
